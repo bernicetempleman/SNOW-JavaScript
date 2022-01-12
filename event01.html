@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>Learning Events</head>
+    <body>
+        <p id ="demo">This is a para</p>
+        <button id="b1">Click</button>
+        <script>
+            document.getElementById("b1").addEventListener("click", myFunction);
+            function myFunction(){
+                alert("I now know Event handling ! ");
+                document.getElementById("demo").innerHTML="Changed by JS Event";
+            }
+            document.getElementById("demo").addEventListener("click", myFunction2);
+            function myFunction2(){
+                alert("clicked on text ! ");
+            }
+        </script>
+    </body>
+</html>

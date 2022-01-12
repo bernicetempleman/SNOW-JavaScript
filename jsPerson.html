@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Inheritance Class Method</h2>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        class Person {
+
+            firstName;
+            lastName;
+            gender;
+            age;
+            constructor(firstName, lastName, gender, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.gender = gender;
+                this.age = age;
+            }
+            details() {
+                return "Name: " + this.firstName + " "
+                    + this.lastName + "<br/>Age: " + this.age + "<br/>Gender: "
+                    + this.gender;
+            }
+
+        }
+        class Employee extends Person {
+            department;
+            salary;
+
+            constructor(firstName, lastName, gender, age, department, salary) {
+                super(firstName, lastName, gender, age); // call  the constructor of super class
+                this.department = department;
+                this.salary = salary;
+            }
+            details() {
+                return  super.details()+ "<br/>Department: "
+                    + this.department + "<br/>Salary: $" + this.salary + "<br/>";
+            }
+        }
+
+        //Persons
+        
+        x = prompt("Enter First Name : ");
+        y = prompt("Enter Last Name: ");
+        z = prompt("Enter gender: ");
+        a = prompt("Enter age: ");
+        //age = parseInt(a); // convert string value to int
+        let p1 = new Person(x, y, z, a);
+        //document.getElementById("demo").innerHTML = p1.details();
+
+        x2 = prompt("Enter First Name : ");
+        y2 = prompt("Enter Last Name: ");
+        z2 = prompt("Enter gender: ");
+        a2 = prompt("Enter age: ");
+        //age = parseInt(a); // convert string value to int
+        let p2 = new Person(x2, y2, z2, a2);
+        //document.getElementById("demo").innerHTML = p2.details();
+
+        x3 = prompt("Enter First Name : ");
+        y3 = prompt("Enter Last Name: ");
+        z3 = prompt("Enter gender: ");
+        a3 = prompt("Enter age: ");
+        //age = parseInt(a); // convert string value to int
+        let p3 = new Person(x3, y3, z3, a3);
+        document.getElementById("demo").innerHTML = p3.details();
+
+        //employees 
+        x4 = prompt("Enter First Name : ");
+        y4 = prompt("Enter Last Name: ");
+        z4 = prompt("Enter gender: ");
+        a4 = prompt("Enter age: ");
+        //age = parseInt(a); // convert string value to int
+        d4 = prompt("Enter Department : ");
+        s4 = prompt("Enter salary: ");
+        //salary = parseInt(s); // convert string value to int
+        let e1 = new Employee(x4, y4, z4, a4, d4, s4);
+
+        x5 = prompt("Enter First Name : ");
+        y5 = prompt("Enter Last Name: ");
+        z5 = prompt("Enter gender: ");
+        a5 = prompt("Enter age: ");
+        //age = parseInt(a); // convert string value to int
+        d5 = prompt("Enter Department : ");
+        s5 = prompt("Enter salary: ");
+        //salary = parseInt(s); // convert string value to int
+        let e2 = new Employee(x5, y5, z5, a5, d5, s5);
+
+        x6 = prompt("Enter First Name : ");
+        y6 = prompt("Enter Last Name: ");
+        z6 = prompt("Enter gender: ");
+        a6 = prompt("Enter age: ");
+        //age = parseInt(a); // convert string value to int
+        d6 = prompt("Enter Department : ");
+        s6 = prompt("Enter salary: ");
+        //salary = parseInt(s); // convert string value to int
+        let e3 = new Employee(x6, y6, z6, a6, d6, s6);
+        
+        document.getElementById("demo").innerHTML = p1.details();
+        document.getElementById("demo1").innerHTML = p2.details();
+        document.getElementById("demo2").innerHTML = p3.details();
+        document.getElementById("demo3").innerHTML = e1.details();
+        document.getElementById("demo4").innerHTML = e2.details();
+        document.getElementById("demo5").innerHTML = e3.details();
+
+    </script>
+
+</body>
+
+</html>

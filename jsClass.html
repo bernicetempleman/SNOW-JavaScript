@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>Pass a parameter into the "age()" method.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+class Car {
+    name;
+    year=0;
+    constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age(x) {
+    return x - this.year;
+  }
+}
+
+let date = new Date();
+let year = date.getFullYear();
+
+x=prompt("Enter Car Name : ");
+y=prompt("Enter Year");
+year1=parseInt(y); // convert string value to int
+
+let myCar = new Car(x, year1);
+document.getElementById("demo").innerHTML=
+"My car is " + myCar.age(year) + " years old.";
+
+
+</script>
+
+</body>
+</html>
+ 

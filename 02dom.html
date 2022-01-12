@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Remove....</title>
+
+    <style>
+        .democlass {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class= "demo">this is a heading</h1>
+    <button onclick="myFunction()">Remove</button>
+
+    <script>
+        function myFunction(){
+            document.getElementsByTagName("h1")[0].removeAttrivute("class");
+        }
+    </script>
+</body>
+
+</html>
+document.getElementsByTagName
+<h1 id="demo">Test it </h1>
+
+<button onclick="removeH1()">Remove the Element</button>
+<script>
+    function removeH1(){
+    var toRemove=document.getElementById("demo");
+    toRemove.remove();
+    }
+</script>

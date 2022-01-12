@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p>If you access an object method without (), it will return the function definition:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName;
+</script>
+
+</body>
+</html>
+
+<script>
+    class Person {
+
+       // firstName;
+        //lasName;
+        //gender;
+       // age;
+        constructor(firstName, lastName, gender, year) {
+            super
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.gender = gender;
+            this.year = year;
+        }
+    }
+
+  
+
+  
+    let e1 = new Person(x, y, z, age, department,salary);
+    document.getElementById("demo").innerHTML =  "Person: " + p1.firstName + " "+ p1.lastName;
+
+</script>
+
+</body>
+
+</html>

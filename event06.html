@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>Some DOM</head>
+
+<body>
+    <p>This is a para</p>
+    <p>This is a second para</p>
+
+    <h1 class="abc">This is H1</h1>
+    <h2 class="abc"> This is h2</H2>
+    <h3 class="abc">This is h3</h3>
+
+    <button onclick="changeHeadingBgColor()">changeHeading color</button>
+    <button onClick="changeBgColor()">Click</button>
+
+    <script>
+        //document.getElementById("b1").addEventListener("click", myFunction);
+        function changeBgColor() {
+
+            //multiplke emements in array
+            var x = document.getElementsByTagName("p");
+
+            //x[0].style.background="red";
+
+            for (i = 0; i < x.length; i++) {
+                x[i].style.background = "yellow";
+            }
+        }
+
+
+        function changeHeadingBgColor() {
+            //var y = document.getElementsByClassName("abc");
+            //var y = document.querySelectorAll(".abc");
+
+
+            //x[0].style.background="red";
+
+            /*for (j = 0; j < y.length; j++) {
+                y[j].style.background = "pink";
+            }*/
+            var y =document.querySelector(".abc");
+            y.style.background="blue";
+
+        }
+
+    </script>
+</body>
+
+</html>

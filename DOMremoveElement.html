@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>The remove method</h1>
+    <p id = "first">the remove method text</p>
+    <p id = "second">2nd para</p>
+    <p>Click the button to remove second para.</p>
+
+
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var el = document.getElementById('second'); 
+            el.remove();
+        }
+    </script>
+
+</body>
+
+</html>

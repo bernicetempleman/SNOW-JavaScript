@@ -1,0 +1,37 @@
+ 
+ 
+ <table class="table" id="table">
+    <thead>
+     <tr>
+        <th>Students</th>
+     </tr>
+     <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Delete</th>
+    </tr>
+  </thead>   
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>john@doe.us</td>
+      <td><button onclick="deleteRow(this)">X</button></td>
+    </tr> 
+
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>john1@doe.us</td>
+      <td><button onclick="deleteRow(this)">X</button></td>
+    </tr> 
+</tbody>
+</table>
+><script>
+    function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("table").deleteRow(i);
+}
+    
+</script>

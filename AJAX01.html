@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>AJAX</title>
+        <script>
+            var myVar = setInterval(myTimer, 1000);
+            
+            function myTimer() {
+              var d = new Date();
+              document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+
+
+            </script>  
+    </head>
+    <body>
+        <main>
+            Using AJAX to get data from an API
+            <br>
+            <input type="text" id="dataInput" />
+            <button type="button" id="getData">Get Data</button>
+            <section style="background-color: crimson;" id="data">
+                                Result : 
+            </section>
+        </main>
+        <hr/>
+        <h3 id="demo"></h3>
+        <script src="git_hub.js"></script>
+    </body>
+</html>

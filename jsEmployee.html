@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class Method</h2>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        class Employee extends Person {
+
+            constructor(firstaName, lastName, gender, age, department, salary) {
+                super(firstaName, lastName, gender, age); // call  the constructor of super class
+                this.department = department
+                this.salary = salary;
+            }
+        }
+
+        x = prompt("Enter First Name : ");
+        y = prompt("Enter Last Name: ");
+        z = prompt("Enter gender: ");
+        a = prompt("Enter age: ");
+        age = parseInt(a); // convert string value to int
+        d = prompt("Enter Department : ");
+        s = prompt("Enter salary: ");
+        salary = parseInt(s); // convert string value to int
+
+        document.getElementById("demo").innerHTML = "Person: " + p1.firstName + " " + p1.lastName;
+
+        let e1 = new Employee(x, y, z, age, d, salary);
+        //document.getElementById("demo").innerHTML = "Employee: " + p1.firstName + " " + p1.lastName;
+
+    </script>
+
+</body>
+
+</html>
